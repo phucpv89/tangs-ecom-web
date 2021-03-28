@@ -1,0 +1,10 @@
+.fallbackContainer {
+  // background-color: whitesmoke;
+  min-height: 100vh;
+  display: flex;
+  span {
+    font-size: 14px;
+    margin: 10px 10px 10px 10px;
+    color: rgba(137, 149, 161, 0.205);
+  }
+}

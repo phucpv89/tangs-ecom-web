@@ -1,0 +1,53 @@
+@import "src/themes/animations";
+
+@mixin shadowBackground {
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  background-color: rgba(0, 0, 0, 0.8);
+}
+$animationDuration: 400ms;
+
+.modal {
+  z-index: 1000;
+  display: flex;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  margin: auto auto auto auto;
+
+  align-items: center;
+  justify-content: center;
+
+  @include shadowBackground;
+
+  animation: fadeIn $animationDuration;
+  &[disabled] {
+    animation: fadeOut $animationDuration;
+    opacity: 0;
+    pointer-events: none;
+    div {
+      animation: scaleDownCenter $animationDuration;
+    }
+  }
+
+  div {
+    min-width: 100px;
+    min-height: 100px;
+    background-color: red;
+    animation: scaleUpCenter $animationDuration;
+  }
+
+  &.open {
+    display: block;
+  }
+
+  .modalContent {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+  }
+}

@@ -1,0 +1,42 @@
+.bufferContainer {
+  min-height: 100vh;
+  height: fit-content;
+  text-align: center;
+  background-image: linear-gradient(to left, #00acfa, #006dff);
+  //   padding-bottom: 4em;
+}
+
+.bufferDesktopContainer {
+  min-height: 100vh;
+  height: fit-content;
+  width: 100vw;
+  text-align: center;
+  padding-bottom: 2em;
+  background-image: linear-gradient(to bottom, #0057cc, #15027f);
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.bufferDesktopNote {
+  p {
+    font-size: 22px;
+  }
+  small {
+    font-size: 13px;
+  }
+}
+
+.bufferDesktopQR {
+  margin: 10px 0 0 0;
+  svg {
+    border-radius: 12px;
+  }
+}
+
+.bufferDesktopBottom {
+  margin-top: 20px;
+}

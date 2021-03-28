@@ -1,0 +1,37 @@
+@import "font";
+
+body {
+  margin: 0;
+  -webkit-tap-highlight-color: transparent;
+  background-color: whitesmoke;
+}
+
+button {
+  border: 0;
+  outline: none;
+}
+a,
+p,
+button,
+span {
+  font-family: "SFProDisplay";
+}
+span,
+p,
+li,
+ul {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

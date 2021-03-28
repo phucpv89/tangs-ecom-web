@@ -1,0 +1,14 @@
+{
+  "ignorePatterns": "serviceWorker.js",
+  "extends": [
+    "react-app"
+  ],
+  "rules": {
+    "max-len": ["error", { "code": 80, "tabWidth": 2 }],
+    "semi": ["error", "always"],
+    "quotes": ["error", "double"],
+    "arrow-parens": ["error", "always"],
+    "eol-last": ["error", "always"],
+    "comma-dangle": ["error", "always-multiline"]
+  }
+}
