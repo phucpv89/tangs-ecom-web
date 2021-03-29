@@ -7,11 +7,18 @@ import FallbackLoading from "src/components/FallbackLoading";
 import ErrorBoundaryPage from "src/components/ErrorBoundary";
 import OrchestratorSwitch from "./OrchestratorSwitch";
 import { PageEnum } from "./constants";
-import "./themes/index.scss";
 
-const LandingPage = lazy(() => import("./pages/LandingPageContainer"));
+const BrandComponent = lazy(() => import("./pages/Brand"));
 const UserGuide = lazy(() => import("./pages/GuidePageContainer"));
-const BufferPage = lazy(() => import("./pages/BufferPageContainer"));
+
+function Brand() {
+  return (
+    <div>
+      <h1>Brand</h1>
+    </div>
+  );
+}
+
 function Root() {
   return (
     <Provider store={store}>
@@ -20,16 +27,12 @@ function Root() {
           <BrowserRouter basename={process.env.REACT_APP_BASE_NAME}>
             <Suspense fallback={<FallbackLoading />}>
               <OrchestratorSwitch>
-                <Route exact path={PageEnum.USER_GUIDE} component={UserGuide} />
+                <Route path={PageEnum.USER_GUIDE} component={UserGuide} />
+                <Route path={"/brand"} component={Brand} />
                 <Route
                   exact
                   path={PageEnum.LANDING_PAGE}
-                  component={LandingPage}
-                />
-                <Route
-                  exact
-                  path={PageEnum.BUFFER_PAGE}
-                  component={BufferPage}
+                  component={BrandComponent}
                 />
               </OrchestratorSwitch>
             </Suspense>
@@ -39,5 +42,7 @@ function Root() {
     </Provider>
   );
 }
+
+
 
 export default Root;

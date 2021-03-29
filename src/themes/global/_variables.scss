@@ -1,0 +1,65 @@
+@import "variablesColor";
+
+$img-path: "~assets/images";
+$path: "~assets";
+
+$grid-columns: 12;
+$grid-gutter-width: 30px;
+
+$grid-breakpoints: (
+  // Extra small screen / phone
+  xs: 360px,
+  // Small screen / phone
+  sm: 576px,
+  // Medium screen / tablet
+  md: 768px,
+  // Large screen / desktop
+  lg: 992px,
+  // Extra large screen / wide desktop
+  xl: 1200px,
+  // Extra large screen / wide desktop
+  xxl: 1600px
+);
+$grid-breakpoints-max-widths: (
+  // Extra small screen / phone
+  xs: 359px,
+  // Small screen / phone
+  sm: 575px,
+  // Medium screen / tablet
+  md: 767px,
+  // Large screen / desktop
+  lg: 991px,
+  // Extra large screen / wide desktop
+  xl: 1199px,
+  // Extra large screen / wide desktop
+  xxl: 1599px
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1366px,
+);
+
+$default_opacity: 0.9;
+// $Avenir: "Avenir-Black", sans-serif;
+// $AvenirMedium: "Avenir-Medium", sans-serif;
+// $Awesome: "Font Awesome 5 Pro";
+
+$raleway: "Raleway", sans-serif;
+
+$spMarginTop: 40px;
+$pcMarginTop: $spMarginTop;
+
+$primaryFont: $raleway;
+// $fontFamilyMainBold: $AvenirMedium;
+$border_radius: 5px;
+$transition-time: 0.5s;
+
+$count-down-size: (
+  sm: 90px,
+  md: 130px,
+  lg: 160px,
+);

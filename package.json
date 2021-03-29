@@ -5,11 +5,12 @@
   "dependencies": {
     "@reduxjs/toolkit": "^1.4.0",
     "axios": "^0.21.0",
+    "bootstrap": "^4.6.0",
     "classnames": "^2.2.6",
     "env-cmd": "^10.1.0",
     "node-sass": "^4.14.1",
-    "qrcode.react": "^1.0.0",
     "react": "^16.13.1",
+    "react-bootstrap": "^1.5.2",
     "react-device-detect": "^1.14.0",
     "react-dom": "^16.13.1",
     "react-ga": "^3.3.0",
@@ -19,16 +20,18 @@
     "react-scripts": "3.4.1"
   },
   "scripts": {
+    "lint": "eslint src/** --no-error-on-unmatched-pattern",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
     "build:qc": "env-cmd -f .env.qc react-scripts build",
     "build:stg": "env-cmd -f .env.stg react-scripts build",
-    "build:production": "env-cmd -f .env.production react-scripts build"
+    "build:production": "env-cmd -f .env.production react-scripts build",
+    "storybook": "start-storybook -p 6006 -s public"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": [
+      "react-app"
+    ]
   },
   "browserslist": {
     "production": [
@@ -41,5 +44,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^6.1.21",
+    "@storybook/addon-essentials": "^6.1.21",
+    "@storybook/addon-links": "^6.1.21",
+    "@storybook/node-logger": "^6.1.21",
+    "@storybook/preset-create-react-app": "^3.1.7",
+    "@storybook/react": "^6.1.21"
   }
 }

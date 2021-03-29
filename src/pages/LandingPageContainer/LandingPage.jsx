@@ -4,9 +4,9 @@ import { useSelector, useDispatch } from "react-redux";
 import styles from "./index.module.scss";
 import { PageEnum } from "src/constants";
 
-import CertificateBlock from "src/components/CertificateComponent";
 import BaseModal from "src/components/BaseModal";
 import DynamicImage from "src/components/DynamicImage";
+import { HeaderTop } from "src/components";
 
 import {
   decrement,
@@ -22,6 +22,7 @@ function LandingPage() {
   function renderCounter() {
     return (
       <>
+        <HeaderTop />
         <button
           className={styles.button}
           aria-label="Increment value"
@@ -65,7 +66,6 @@ function LandingPage() {
           <span>USER_GUIDE</span>
         </NavLink>
         {renderCounter()}
-        <CertificateBlock />
         <DynamicImage
           width={200}
           height={100}
